@@ -1,4 +1,4 @@
-### MyFinalProjectforABBTechAcademy
+### Final Project for ABB Tech Academy
 
 My topic for the final project was "Analyzing customer churn in banking". Since it is impossible to find real-life bank customer data as an open source, I took a churn data from Kaggle, customized it so it become suitable for customer churn analysis in banking sector. 
 
