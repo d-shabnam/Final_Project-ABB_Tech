@@ -1,4 +1,3 @@
-DROP VIEW churned;
 CREATE VIEW churned AS  (
     SELECT 
         cus.CUSTOMERID,
@@ -74,7 +73,7 @@ case when TOTALTRANSACTIONCOUNT > 500 then '500+'
             else '200 -' end
 order by 1 desc, 2 desc;
 
---bu il ərzində qeydiyyatdan keçənlərin neçəsi və hansı ayda churn edib
+--Churn analysis of users registered within the year: number and month of churn.
 select month, count(CUSTOMERID) churned_customer_count, round(avg(TOTALRELATIONSHIPCOUNT), 0) average_account_count
 from (select CUSTOMERID, TOTALRELATIONSHIPCOUNT, 2023 - EXTRACT(YEAR FROM CUSTOMERSINCE) AS tenure, 
              to_char(to_date(CUSTOMERSINCE, 'DD-MM-YYYY'), 'mm') month, churn
